@@ -10,7 +10,8 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook -s public",
     "prettier:write": "npx prettier --write .",
-    "cy:run": "cypress run"
+    "cy:run": "cypress run",
+    "cy:open": "cypress open"
   },
   "dependencies": {
     "@ant-design/icons": "^4.2.2",
@@ -27,7 +28,7 @@
     "codemirror": "^5.56.0",
     "color-thief-react": "^1.0.2",
     "elasticlunr": "^0.9.5",
-    "firebase": "^8.6.3",
+    "firebase": "^9.17.1",
     "history": "^4.10.1",
     "lodash": "^4.17.20",
     "prop-types": "^15.7.2",
