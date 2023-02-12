@@ -26,7 +26,7 @@ jobs:
       - name: Run Firebase Emulator
         run: firebase emulators:start --import=testdata --project codelabz-2402c &
       - name: Cypress run
-        uses: cypress-io/github-action@v2 --legacy-peer-deps
+        uses: cypress-io/github-action@v2
         with:
           build: npm run build
           start: npm start
