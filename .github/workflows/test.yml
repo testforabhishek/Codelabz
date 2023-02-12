@@ -32,5 +32,6 @@ jobs:
         with:
           install: false
           build: npm run build
-          start: npm start
+          start: npm dev
+      - name: Start Tests
           run: npm cy:run
