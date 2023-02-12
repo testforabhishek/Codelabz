@@ -1,5 +1,8 @@
 name: Cypress Tests
 
+env:
+  FIREBASE_PROJECT_ID: ${{ secrets.VITE_APP_FIREBASE_PROJECT_ID }}
+
 on:
   push:
     branches:
