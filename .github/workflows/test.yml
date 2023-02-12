@@ -33,5 +33,5 @@ jobs:
           install: false
           build: npm run build
           start: npm run dev
-      - name: Start Tests
-        run: npm run cy:run
+          command: npm run cypress run --headless
+          browser: chrome
