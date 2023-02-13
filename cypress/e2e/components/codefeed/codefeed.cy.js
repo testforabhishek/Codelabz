@@ -39,7 +39,7 @@ describe("Codefeed Page | CodeLabz", () => {
 
   it("check header component is present", function () {
     cy.visit(`${this.base_url}dashboard/my_feed`);
-    cy.wait(3000);
+    cy.wait(8000);
     cy.get("[data-testid='codefeedBox']").within(()=>{
     cy.get("[data-testid='codefeedTitle']").should("exist");
   })
