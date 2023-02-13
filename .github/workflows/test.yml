@@ -33,5 +33,5 @@ jobs:
       - name: Build the server
         run: npm run build
       - name: Run Firebase Emulator and Start Tests
-        run: firebase emulators:exec 'npm run test' --import=testdata --project ${{ env.VITE_APP_FIREBASE_PROJECT_ID }} 
+        run: firebase emulators:exec --import=testdata --project ${{ env.VITE_APP_FIREBASE_PROJECT_ID }} 'npm run test'
      
