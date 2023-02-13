@@ -37,7 +37,7 @@ jobs:
         run: firebase emulators:start --import=testdata --project ${{ env.VITE_APP_FIREBASE_PROJECT_ID }} &
       - name: Cypress install
         run: npm install --legacy-peer-deps
-      - name: Cypress run
+      - name: Cypress run tests
         uses: cypress-io/github-action@v2
         with:
           install: false
