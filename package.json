@@ -12,7 +12,7 @@
     "prettier:write": "npx prettier --write .",
     "cy:run": "cypress run --headless --browser chrome --record --key 89239010-c88f-4939-b16a-4609288bccf2",
     "cy:open": "cypress open --browser chrome",
-    "test": "start-server-and-test start http://localhost:3030 cy:run"
+    "test": "start-server-and-test dev http://localhost:5173 cy:run"
   },
   "dependencies": {
     "@ant-design/icons": "^4.2.2",
@@ -54,9 +54,9 @@
     "redux-auth-wrapper": "^3.0.0",
     "redux-firestore": "^0.15.0",
     "redux-thunk": "^2.3.0",
+    "start-server-and-test": "^1.15.3",
     "url": "^0.11.0",
-    "validator": "^13.6.0",
-    "wait-on": "^7.0.1"
+    "validator": "^13.6.0"
   },
   "devDependencies": {
     "@faker-js/faker": "^7.6.0",

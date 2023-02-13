@@ -36,10 +36,8 @@ jobs:
       - run: npm install -g firebase-tools
       - name: Build the server
         run: npm run build
-      - name: Start the server
-        run: npm run dev & wait-on http://localhost:5173
-      - name: Run Firebase Emulator
-        run: firebase emulators:exec 'npm run cy:run' --import=testdata --project ${{ env.VITE_APP_FIREBASE_PROJECT_ID }} 
+      - name: Run Firebase Emulator and Start Tests
+        run: firebase emulators:exec 'npm run test' --import=testdata --project ${{ env.VITE_APP_FIREBASE_PROJECT_ID }} 
       # - name: Cypress install
       #   run: npm install --legacy-peer-deps
       # - name: Cypress run tests
