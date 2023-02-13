@@ -10,7 +10,8 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook -s public",
     "prettier:write": "npx prettier --write .",
-    "cy:run": "cypress run --headless --browser chrome"
+    "cy:run": "cypress run --headless --browser chrome",
+    "cy:open": "cypress open --browser chrome"
   },
   "dependencies": {
     "@ant-design/icons": "^4.2.2",
