@@ -12,7 +12,7 @@ const MyFeed = ({
 	textcolor = "black",
 }) => {
 	return (
-		<Box style={{ background: backgroundcolor, color: textcolor }}>
+		<Box style={{ background: backgroundcolor, color: textcolor }} data-testId="codefeedBox" >
 			<Grid container>
 				<Grid
 					container
