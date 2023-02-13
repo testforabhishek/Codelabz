@@ -38,23 +38,23 @@ describe("Tutorial Test | CodeLabz", () => {
   // it("tutorial components present", function () {
   //   cy.visit(`${this.base_url}tutorials`);
   // // tutorial main body
-  // cy.get("[data-testId=tutorialMainBody]");
+  // cy.get("[data-testid=tutorialMainBody]");
   // // tutorial search components
-  // cy.get("[data-testId=tutorialSearch]");
+  // cy.get("[data-testid=tutorialSearch]");
   // // new tutorial add button
-  // cy.get("[data-testId=tutorialAddNewButton]");
+  // cy.get("[data-testid=tutorialAddNewButton]");
   // // org tutorial component
-  // cy.get("[data-testId=tutorialCard]");
+  // cy.get("[data-testid=tutorialCard]");
   // });
   it("new tutorial modal open", function () {
     cy.visit(`${this.base_url}tutorials`);
     cy.wait(1000);
-    cy.get("[data-testId=NewTutorialBtn]").click();
-    cy.get("[data-testId=tutorialNewModal]");
-    cy.get("[data-testId=newTutorial_title]").should("exist");
-    cy.get("[data-testId=newTutorial_summary]").should("exist");
+    cy.get("[data-testid=NewTutorialBtn]").click();
+    cy.get("[data-testid=tutorialNewModal]");
+    cy.get("[data-testid=newTutorial_title]").should("exist");
+    cy.get("[data-testid=newTutorial_summary]").should("exist");
     cy.get("#orgSelect").should("exist");
     cy.get("#cancelAddTutorial").click();
-    cy.get("[data-testId=tutorialNewModal]").should("not.exist");
+    cy.get("[data-testid=tutorialNewModal]").should("not.exist");
   });
 });

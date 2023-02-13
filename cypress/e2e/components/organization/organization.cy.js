@@ -88,9 +88,9 @@ describe("Organization Page | CodeLabz", () => {
     cy.get('[data-testid="Social media"]').should("exist").click();
     cy.wait(4000);
     cy.get('[data-testid="organization-socialmedia-page"]').should("exist");
-    cy.get("[data-testId=facebookButton]").should("exist");
-    cy.get("[data-testId=githubButton]").should("exist");
-    cy.get("[data-testId=googleButton]").should("exist");
-    cy.get("[data-testId=twitterButton]").should("exist");
+    cy.get("[data-testid=facebookButton]").should("exist");
+    cy.get("[data-testid=githubButton]").should("exist");
+    cy.get("[data-testid=googleButton]").should("exist");
+    cy.get("[data-testid=twitterButton]").should("exist");
   })
 });

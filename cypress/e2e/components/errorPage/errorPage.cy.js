@@ -22,7 +22,7 @@ describe("Error Page Test | CodeLabz", () => {
 
   it("wrong url", function () {
     cy.visit(`${this.base_url}test1`);
-    cy.get("[data-testId=errorPage]").should("exist")
+    cy.get("[data-testid=errorPage]").should("exist")
     cy.contains("We can't seem to find the page you are looking for")
   })
 

@@ -22,13 +22,13 @@ describe("Forgot Password Page | CodeLabz", () => {
 
   it("empty email ", function () {
     cy.visit(`${this.base_url}forgotpassword`);
-    cy.get("[data-testId=forgotPasswordButton]").click();
+    cy.get("[data-testid=forgotPasswordButton]").click();
     cy.contains("The email address is badly formatted.");
   });
   it("successfull ", function () {
     cy.visit(`${this.base_url}forgotpassword`);
-    cy.get("[data-testId=forgotPasswordEmail]").type(this.credentials.email);
-    cy.get("[data-testId=forgotPasswordButton]").click();
+    cy.get("[data-testid=forgotPasswordEmail]").type(this.credentials.email);
+    cy.get("[data-testid=forgotPasswordButton]").click();
     cy.contains(
       "We have sent you an email containing the link to reset your password"
     );

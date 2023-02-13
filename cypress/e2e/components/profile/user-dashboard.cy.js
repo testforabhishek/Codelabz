@@ -27,36 +27,36 @@ describe("User Dashboard Test | CodeLabz", () => {
     it("Check Switch Account", function () {
         cy.visit(`${this.base_url}user-dashboard/profile`);
 
-        cy.get("[data-testId=switchAccount]").should("exist");
-        cy.get("[data-testId=switchAccount_switch]").should("exist")
+        cy.get("[data-testid=switchAccount]").should("exist");
+        cy.get("[data-testid=switchAccount_switch]").should("exist")
     })
 
     it("Check Profile", function () {
         cy.visit(`${this.base_url}user-dashboard/profile`);
         cy.get('[data-testid="profile"]').should("exist").click();
-        cy.get("[data-testId=profilePage]").should("exist");
+        cy.get("[data-testid=profilePage]").should("exist");
         cy.get("[data-testid=name]").children().clear().type("testname");
-        cy.get("[data-testId=selectCountry]").click();
-        cy.get("[data-testId=selectCountryItem]").first().click();
-        cy.get("[data-testId=website]").children().clear().type("https://test.web");
-        cy.get("[data-testId=description]").children().clear().type("description");
-        cy.get("[data-testId=editProfileFacebook]")
+        cy.get("[data-testid=selectCountry]").click();
+        cy.get("[data-testid=selectCountryItem]").first().click();
+        cy.get("[data-testid=website]").children().clear().type("https://test.web");
+        cy.get("[data-testid=description]").children().clear().type("description");
+        cy.get("[data-testid=editProfileFacebook]")
             .find("div > input")
             .clear()
             .type("facebook");
-        cy.get("[data-testId=editProfileTwitter]")
+        cy.get("[data-testid=editProfileTwitter]")
             .find("div > input")
             .clear()
             .type("twitter");
-        cy.get("[data-testId=editProfileLinkedin]")
+        cy.get("[data-testid=editProfileLinkedin]")
             .find("div > input")
             .clear()
             .type("linkedin");
-        cy.get("[data-testId=editProfileGithub]")
+        cy.get("[data-testid=editProfileGithub]")
             .find("div > input")
             .clear()
             .type("github");
-        cy.get("[data-testId=editProfileSave]").click();
+        cy.get("[data-testid=editProfileSave]").click();
 
     })
 
@@ -64,44 +64,44 @@ describe("User Dashboard Test | CodeLabz", () => {
         cy.visit(`${this.base_url}user-dashboard/profile`);
 
         cy.get('[data-testid="userSettings"] > .makeStyles-navLink-81 > .MuiButtonBase-root').should("exist").click();
-        cy.get("[data-testId=userSettingsPage]").should("exist");
-        cy.get("[data-testId=exportData]").should("exist");
-        cy.get("[data-testId=startExport]").should("exist");
-        cy.get("[data-testId=successorSettings]").should("exist");
-        cy.get("[data-testId=addSuccessor]").should("exist");
-        cy.get("[data-testId=deactivateAccount]").should("exist");
-        cy.get("[data-testId=deleteAccount]").should("exist");
+        cy.get("[data-testid=userSettingsPage]").should("exist");
+        cy.get("[data-testid=exportData]").should("exist");
+        cy.get("[data-testid=startExport]").should("exist");
+        cy.get("[data-testid=successorSettings]").should("exist");
+        cy.get("[data-testid=addSuccessor]").should("exist");
+        cy.get("[data-testid=deactivateAccount]").should("exist");
+        cy.get("[data-testid=deleteAccount]").should("exist");
 
     })
 
     it("Check Social Media", function () {
         cy.visit(`${this.base_url}user-dashboard/profile`);
         cy.wait(2000);
-        cy.get("[data-testId=socialMedia]").should("exist").click();
-        cy.get("[data-testId=socialMediaPage]").should("exist");
+        cy.get("[data-testid=socialMedia]").should("exist").click();
+        cy.get("[data-testid=socialMediaPage]").should("exist");
         // cy.wait(2000);
     })
     it("Check Password", function () {
         cy.visit(`${this.base_url}user-dashboard/profile`);
 
-        cy.get("[data-testId=password]").should("exist").click();
-        cy.get("[data-testId=passwordPage]").should("exist");
-        cy.get("[data-testId=oldPassword]").type("oldPassword");
-        cy.get("[data-testId=newPassword]").type("newPassword");
-        cy.get("[data-testId=confirmPassword]").type("newPassword");
-        cy.get("[data-testId=updatePassword]").should("exist");
-        cy.get("[data-testId=logout]").should("exist");
-        cy.get("[data-testId=logoutOfOtherBrowsers]").should("exist");
-        cy.get("[data-testId=loginSecurity]").should("exist");
-        cy.get("[data-testId=emailVerification]").should("exist");
+        cy.get("[data-testid=password]").should("exist").click();
+        cy.get("[data-testid=passwordPage]").should("exist");
+        cy.get("[data-testid=oldPassword]").type("oldPassword");
+        cy.get("[data-testid=newPassword]").type("newPassword");
+        cy.get("[data-testid=confirmPassword]").type("newPassword");
+        cy.get("[data-testid=updatePassword]").should("exist");
+        cy.get("[data-testid=logout]").should("exist");
+        cy.get("[data-testid=logoutOfOtherBrowsers]").should("exist");
+        cy.get("[data-testid=loginSecurity]").should("exist");
+        cy.get("[data-testid=emailVerification]").should("exist");
 
         // cy.wait(2000);
     })
     it("Check Organizations", function () {
         cy.visit(`${this.base_url}user-dashboard/profile`);
 
-        cy.get("[data-testId=organizations]").should("exist").click();
-        cy.get("[data-testId=organizationsPage]").should("exist");
+        cy.get("[data-testid=organizations]").should("exist").click();
+        cy.get("[data-testid=organizationsPage]").should("exist");
         // cy.wait(2000);
     })
 })

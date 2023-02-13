@@ -16,7 +16,7 @@ describe("Login Page | CodeLabz", () => {
     cy.visit(`${this.base_url}login`);
     cy.wait(5000);
     cy.get("[data-testid=login]").should("exist");
-    cy.get("[data-testId=smButtons").should("exist");
+    cy.get("[data-testid=smButtons").should("exist");
   });
 
   it("forgot password", function () {
@@ -25,7 +25,7 @@ describe("Login Page | CodeLabz", () => {
     cy.visit(`${this.base_url}login`);
     cy.wait(2000);
 
-    cy.get("[data-testId=forgotPassoword").click();
+    cy.get("[data-testid=forgotPassoword").click();
     cy.location().should((loc) => {
       expect(loc.href).to.eq(`${this.base_url}forgotpassword`);
     });
@@ -45,7 +45,7 @@ describe("Login Page | CodeLabz", () => {
 
     cy.get(".email").type(this.credentials.email);
     cy.get(".password").type(this.credentials.password);
-    cy.get("[data-testId=loginButton]").click();
+    cy.get("[data-testid=loginButton]").click();
     cy.wait(5000);
     cy.location().should((loc) => {
       expect(loc.href).to.eq(`${this.base_url}dashboard/my_feed`);

@@ -15,8 +15,8 @@ describe("Hamburger Menu Test | CodeLabz", () => {
       indexedDB.deleteDatabase("firebaseLocalStorageDb");
       cy.visit(`${this.base_url}dashboard`);
   
-      cy.viewport(850,640).get("[data-testId=MenuIcon]").should("exist")
-      cy.get("[data-testId=MenuIcon]").click()
+      cy.viewport(850,640).get("[data-testid=MenuIcon]").should("exist")
+      cy.get("[data-testid=MenuIcon]").click()
     });
   });
   

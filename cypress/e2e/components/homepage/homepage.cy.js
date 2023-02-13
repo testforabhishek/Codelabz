@@ -17,12 +17,12 @@ describe("Error Page Test | CodeLabz", () => {
 
   it("check not logged in user can access homepage", function () {
     cy.visit(this.base_url);
-    cy.get("[data-testId=homepage");
+    cy.get("[data-testid=homepage");
   });
 
   it("check main body has atleast one child", function () {
-    cy.get("[data-testId=homepageMainBody");
-    cy.get("[data-testId=homepageMainBody").should("have.length.at.least", 1);
+    cy.get("[data-testid=homepageMainBody");
+    cy.get("[data-testid=homepageMainBody").should("have.length.at.least", 1);
   });
 
 });

@@ -13,12 +13,12 @@ describe("Profile Page | CodeLabz", () => {
 
   it("check card exist", function () {
     cy.wait(3000);
-    cy.get("[data-testId=codelabzCard]").should("exist");
+    cy.get("[data-testid=codelabzCard]").should("exist");
   });
   it("check other components exist", function () {
     cy.wait(3000);
-    cy.get("[data-testId=codelabzCardHeader]").should("exist");
-    cy.get("[data-testId=codelabzCardContent]").should("exist");
-    cy.get("[data-testId=codelabzCardButtonGroup]").should("exist");
+    cy.get("[data-testid=codelabzCardHeader]").should("exist");
+    cy.get("[data-testid=codelabzCardContent]").should("exist");
+    cy.get("[data-testid=codelabzCardButtonGroup]").should("exist");
   });
 });

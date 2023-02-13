@@ -21,28 +21,28 @@ describe("Editor Test | CodeLabz", () => {
 
   it("create new tutorial", function () {
     cy.visit(`${this.base_url}tutorials`);
-    cy.get("[data-testId=addNewTutorial]").click()
+    cy.get("[data-testid=addNewTutorial]").click()
   })
 
   it("check editor view exist", function () {
     cy.visit(`${this.base_url}tutorials/codelabzorg/OKfLHvn0F8OklPTHFnS0`)
-    cy.get('[data-testId=tutorial-content').should("exist")
+    cy.get('[data-testid=tutorial-content').should("exist")
   })
 
   it("check firepad exist", function () {
     cy.visit(`${this.base_url}tutorials/codelabzorg/OKfLHvn0F8OklPTHFnS0`);
     cy.wait(6000);
-    cy.get("[data-testId=editorMode]").click();
+    cy.get("[data-testid=editorMode]").click();
     cy.wait(2000);
 
-    // cy.get("[data-testId=editorFirepad]").should("exist");
+    // cy.get("[data-testid=editorFirepad]").should("exist");
   });
 
   it("add image input", function () {
     cy.visit(`${this.base_url}tutorials/codelabzorg/OKfLHvn0F8OklPTHFnS0`);
     cy.wait(2000);
-    cy.get("[data-testId=tutorialImgUpload]").should("not.exist");
+    cy.get("[data-testid=tutorialImgUpload]").should("not.exist");
     cy.get("#tutorialAddImg").click();
-    cy.get("[data-testId=tutorialImgUpload]").should("exist");
+    cy.get("[data-testid=tutorialImgUpload]").should("exist");
   });
 });

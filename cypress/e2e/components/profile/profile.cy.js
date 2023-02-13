@@ -25,15 +25,15 @@ describe("Profile Page | CodeLabz", () => {
 
   it("Check Profile Page Url", function () {
     cy.visit(`${this.base_url}profile`);
-    // cy.get("[data-testId=AboutUsersHeading]").should("not.have.text", "");
-    // cy.get("[data-testId=AboutUsersContent]").should("exist");
-    // cy.get("[data-testId=DescriptionHeading]").should("not.have.text", "");
-    // cy.get("[data-testId=DescriptionContent]").should("exist");
-    cy.get("[data-testId=HighlightsHeading]").should("not.have.text", "");
-    cy.get("[data-testId=HighlightsCurrentJob]").should("exist");
-    cy.get("[data-testId=HighlightsEducation]").should("exist");
-    cy.get("[data-testId=HighlightsLanguages]").should("exist");
-    cy.get("[data-testId=HighlightsJoinedDate]").should("exist");
+    // cy.get("[data-testid=AboutUsersHeading]").should("not.have.text", "");
+    // cy.get("[data-testid=AboutUsersContent]").should("exist");
+    // cy.get("[data-testid=DescriptionHeading]").should("not.have.text", "");
+    // cy.get("[data-testid=DescriptionContent]").should("exist");
+    cy.get("[data-testid=HighlightsHeading]").should("not.have.text", "");
+    cy.get("[data-testid=HighlightsCurrentJob]").should("exist");
+    cy.get("[data-testid=HighlightsEducation]").should("exist");
+    cy.get("[data-testid=HighlightsLanguages]").should("exist");
+    cy.get("[data-testid=HighlightsJoinedDate]").should("exist");
 
     cy.location().should((loc) => {
       expect(loc.href).to.eq(`${this.base_url}profile`);

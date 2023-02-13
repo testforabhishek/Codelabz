@@ -25,13 +25,13 @@ describe("SignUp Page | CodeLabz", () => {
   it("Check if SignUp card exist", function () {
     cy.visit(`${this.base_url}signup`);
     cy.get("[data-testid=signUp]").should("exist");
-    cy.get("[data-testId=signUpHaveAccount").should("exist");
-    cy.get("[data-testId=smButtons").should("exist");
+    cy.get("[data-testid=signUpHaveAccount").should("exist");
+    cy.get("[data-testid=smButtons").should("exist");
   });
 
   it("Check empty email validation", function () {
     cy.visit(`${this.base_url}signup`);
-    cy.get("[data-testId=signUpButton").click();
+    cy.get("[data-testid=signUpButton").click();
     cy.contains("Please Enter your Email!");
     cy.contains(
       "You have to agree to our terms and conditions in order to register"
@@ -40,15 +40,15 @@ describe("SignUp Page | CodeLabz", () => {
   it("check there is atleast 1 way to signup other than email and password", function () {
     cy.visit(`${this.base_url}signup`);
     cy.wait(2000);
-    cy.get("[data-testId=smButtons").should("have.length.at.least", 1);
+    cy.get("[data-testid=smButtons").should("have.length.at.least", 1);
   });
   it("check password and confirm password match", function () {
     cy.visit(`${this.base_url}signup`);
-    cy.get("[data-testId=signUpEmail").type(faker.internet.email());
+    cy.get("[data-testid=signUpEmail").type(faker.internet.email());
     const password = faker.internet.password();
-    cy.get("[data-testId=signUpPassword").type(password);
-    cy.get("[data-testId=signUpConfirmPassword").type(password);
-    cy.get("[data-testId=TnC").click();
-    cy.get("[data-testId=signUpButton").click();
+    cy.get("[data-testid=signUpPassword").type(password);
+    cy.get("[data-testid=signUpConfirmPassword").type(password);
+    cy.get("[data-testid=TnC").click();
+    cy.get("[data-testid=signUpButton").click();
   });
 });
