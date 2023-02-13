@@ -10,7 +10,7 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook -s public",
     "prettier:write": "npx prettier --write .",
-    "cy:run": "cypress run --headless --browser chrome",
+    "cy:run": "cypress run --headless --browser chrome --record --key 89239010-c88f-4939-b16a-4609288bccf2",
     "cy:open": "cypress open --browser chrome"
   },
   "dependencies": {
