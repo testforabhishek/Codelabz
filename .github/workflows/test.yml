@@ -43,13 +43,7 @@ jobs:
           CYPRESS_PROJECT_ID: ${{ secrets.CYPRESS_PROJECT_ID }}
           SKIP_PREFLIGHT_CHECK: true
           CI: false
-      - run: cd functions && mkdir private && touch private/cl-dev-pk.json
-      - name: create-json
-        id: create-json
-        uses: jsdaniell/create-json@v1.2.2
-        with:
-          name: "cl-dev-pk.json"
-          json: '{
+          JSON: {
                   "type": "service_account",
                   "project_id": "codelabz-2402c",
                   "private_key_id": "0a930d9d60af3445078f59ca3041e5bdd199c8a7",
@@ -60,8 +54,14 @@ jobs:
                   "token_uri": "https://oauth2.googleapis.com/token",
                   "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
                   "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-68upo%40codelabz-2402c.iam.gserviceaccount.com"
-                }'
-  
+                }
+      - run: cd functions && mkdir private && touch private/cl-dev-pk.json
+      - name: create-json
+        id: create-json
+        uses: jsdaniell/create-json@v1.2.2
+        with:
+          name: "cl-dev-pk.json"
+          json: ${{ env.JSON }}
           dir: "functions/private/"
       - name: Install dependencies
         run: npm install --legacy-peer-deps
