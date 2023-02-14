@@ -1,9 +1,10 @@
+require("dotenv").config();
 const admin = require("firebase-admin");
 
 const serviceAccount = require("./private/cl-dev-pk.json");
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
-  databaseURL: "https://codelabz-2402c-default-rtdb.asia-southeast1.firebasedatabase.app/",
+  databaseURL: process.env.VITE_APP_DATABASE_URL,
 });
 
 const db = admin.firestore();
