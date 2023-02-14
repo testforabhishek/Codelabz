@@ -1,4 +1,3 @@
-require("dotenv").config();
 const admin = require("firebase-admin");
 
 const serviceAccount = require("./private/cl-dev-pk.json");
